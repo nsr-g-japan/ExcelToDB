@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<body>
+<form action=" " method="POST">
+ {% csrf_token %}
+
+
+ {% for name, nvalue in data.items %}
+ <input type="checkbox" name="sheet[]" value="{{name}}">
+     <label>{{name}}</label><br>
+    {% for cval in nvalue %}
+        <input type="checkbox" id ='demo' name="cval['{{name}}'][]" value={{cval}}>
+    <label>{{cval}}</label>
+    <select name="val['{{name}}']['{{cval}}']" >
+    <option></option>
+<option  > nvarchar(200)</option>
+<option  > int</option>
+<option  > date</option>
+</select>
+
+
+
+            <br><br>
+        {% endfor %}
+   {{cval}}
+    {% endfor %}
+
+    <input type="submit"   value="Submit" > <br><br>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+
+</head>
+
+<body bgcolor="#2E94CC">
+<center>
+ <form action=" " method="POST">
+        {% csrf_token %}
+   Enter the Excel path:<input id="sheetpath" type="text" name="sheetpath"><br><br>
+   <input type="submit" value="Get sheet details" name="sheet" id="sheet"> <br><br>
+
+
+</form>
+    </center>
+</body>
+</html>
